@@ -1,39 +1,365 @@
-# databricks_analises
+# 📊 Databricks Análises - Estudos Avançados em Data Analytics
 
-Este repositório reúne estudos, experimentos e aplicações práticas em análise de dados, com foco em processamento, exploração e interpretação de informações em ambiente Databricks. A proposta é centralizar materiais que ajudem a compreender diferentes formas de transformar dados em insigths úteis, validar cenários reais e explorar alternativas de solução para problemas analíticos com clareza e eficiência.
+Um repositório abrangente de estudos, experimentos e aplicações práticas em análise de dados com foco em processamento em escala, exploração de informações e interpretação de cenários complexos em ambiente **Databricks**.
 
-## Visão geral
+## 📋 Descrição do Projeto
 
-O conjunto de projetos neste repositório reflete uma abordagem prática para o trabalho com dados em escala, incluindo a construção de cenários analíticos, a comparação de ferramentas e a aplicação de técnicas de transformação e interpretação. A ideia é demonstrar como diferentes estruturas de dados e ferramentas podem ser usadas para responder perguntas de negócio, apoiar decisões e estruturar fluxos de análise mais robustos.
+Este repositório reúne análises práticas e teóricas que cobrem:
 
-## Projetos e estudos
+- **Estudos de Caso Reais e Fictícios**: Cenários que simulam desafios analíticos do mundo empresarial
+- **Processamento em Escala**: Manipulação eficiente de grandes volumes de dados
+- **Comparação de Abordagens**: PySpark vs SQL - qual usar em cada situação
+- **Integração com IA**: Conectar dados com inteligência artificial para auditoria e insights
+- **Exploração de Dados**: Técnicas de EDA, transformação e enriquecimento
+- **Otimização de Consultas**: Performance tuning em ambiente Spark
 
-### 1. Estudos de caso aplicados
-Nesta parte do repositório, há materiais voltados para cenários reais e fictícios que simulam desafios analíticos de negócio. Os notebooks abordam a organização da análise, a identificação de padrões e a extração de conclusões a partir de dados estruturados e de contexto de decisão.
+## 🎯 Caso de Uso
 
-### 2. Processamento e manipulação de dados
-Os projetos também contemplam a análise de formas de tratar, organizar e transformar dados para facilitar consultas, comparações e geração de resultados consistentes. Esse eixo é essencial para garantir que as informações estejam preparadas para análise posterior e para uso em relatórios, dashboards ou tomadas de decisão.
+Ideal para:
+- 📈 **Analistas de Dados**: Aprimorar skills em Databricks e Spark
+- 🔬 **Cientistas de Dados**: Explorar técnicas de processamento em escala
+- 💼 **Engenheiros de Dados**: Estudar padrões de otimização e design
+- 🎓 **Aprendizado**: Referência prática para análise de dados em produção
+- 🏢 **Empresas**: Modelos de caso de uso aplicáveis a cenários reais
 
-### 3. Comparação de abordagens de processamento
-Há também estudos que comparam diferentes formas de trabalhar com dados, avaliando como a escolha da ferramenta e da lógica de transformação impacta o resultado, a manutenção do código e a eficiência da execução. Esse tipo de comparação auxilia na identificação da melhor estratégia conforme o contexto e volume de informação.
+## 🏗️ Arquitetura e Fluxo
 
-### 4. Uso de IA e automação em análises
-Além da análise tradicional, o repositório inclui abordagens que conectam dados e inteligência artificial para apoiar auditoria, revisão de informações e interpretação de cenários complexos. Esse tipo de material mostra como a análise de dados pode evoluir para suporte mais inteligente e automatizado.
+```
+┌──────────────────────────────────────────────────────────────┐
+│                    Dados Brutos (RAW)                        │
+│           (CSV, JSON, Parquet, Delta Tables)                 │
+└────────────────┬─────────────────────────────────────────────┘
+                 │
+         ┌───────▼──────────┐
+         │  Exploração (EDA)│
+         │  Perfilamento    │
+         │  Limpeza         │
+         └───────┬──────────┘
+                 │
+         ┌───────▼──────────────────────┐
+         │  Transformação & Enriquecimento
+         │  ├─ PySpark APIs             │
+         │  ├─ SQL via Spark            │
+         │  └─ Otimização               │
+         └───────┬──────────────────────┘
+                 │
+         ┌───────▼──────────────────────┐
+         │  Análises Temáticas          │
+         │  ├─ Auditoria                │
+         │  ├─ BI/BI                    │
+         │  ├─ Modelos Preditivos       │
+         │  └─ Insights com IA          │
+         └───────┬──────────────────────┘
+                 │
+         ┌───────▼──────────────────────┐
+         │  Visualizações e Relatórios  │
+         │  (Dashboards, Exports)       │
+         └──────────────────────────────┘
+```
 
-## Tecnologias e ferramentas
+## 📁 Estrutura do Projeto
 
-- Databricks
-- Python
-- Spark / PySpark
-- SQL
-- Jupyter Notebooks
+```
+databricks_analises/
+├── (Public) Case_Ficticio_Auditoria_Assistente_IA.ipynb
+│   ├── Cenário: Auditoria de dados com assistência IA
+│   ├── Conceitos: RAG, Busca semântica, LLM
+│   ├── Técnicas: Validação de dados, anomalias
+│   └── Saída: Relatório estruturado com recomendações
+│
+├── (Public) Pyspark vs SQL via Spark - Manipulação de Dados.ipynb
+│   ├── Comparação prática entre APIs
+│   ├── Performance benchmarks
+│   ├── Quando usar cada uma
+│   └── Exemplos lado a lado
+│
+├── README.md  # Este arquivo
+└── [Novos notebooks podem ser adicionados]
+```
 
-## Estrutura do repositório
+## 📓 Projetos Inclusos
 
-- Notebook com estudos de caso e cenários analíticos
-- Notebook com manipulação e transformação de dados
-- Material de apoio para exploração e comparação de soluções em análise de dados
+### 1️⃣ Case Fictício: Auditoria com Assistente IA
 
-## Objetivo
+**Arquivo**: `(Public) Case_Ficticio_Auditoria_Assistente_IA.ipynb`
 
-O objetivo deste repositório é servir como espaço de aprendizado, experimentação e organização de projetos relacionados à análise de dados em contexto prático. Ele busca reunir exemplos que ajudem a desenvolver raciocínio analítico, compreender diferentes abordagens de processamento e fortalecer a capacidade de transformar dados em informações relevantes para tomada de decisão.
+**Objetivo**: Demonstrar como usar IA generativa para auxiliar auditoria e validação de dados.
+
+**Tópicos Cobertos:**
+- 🔍 Carregamento e exploração de dados
+- 📊 Perfilamento de qualidade
+- 🤖 Integração com modelos de linguagem (LLM)
+- ✅ Geração automática de checklist de auditoria
+- 📋 Identificação de anomalias e padrões suspeitos
+- 🎯 Relatório estruturado com recomendações
+
+**Tecnologias:**
+- PySpark para processamento
+- SQL para consultas analíticas
+- Groq/LLaMA para análise com IA
+- Delta Lake para persistência
+
+**Casos de Uso:**
+- Auditoria de qualidade de dados
+- Validação de integridade referencial
+- Detecção de fraudes e anomalias
+- Geração de relatórios com insights automatizados
+
+---
+
+### 2️⃣ PySpark vs SQL - Manipulação de Dados
+
+**Arquivo**: `(Public) Pyspark vs SQL via Spark - Manipulação de Dados.ipynb`
+
+**Objetivo**: Comparação prática e objetiva entre PySpark e SQL para as mesmas operações.
+
+**Tópicos Cobertos:**
+- 📌 Leitura e escrita de dados
+- 🔄 Transformações básicas (select, filter, groupby)
+- 📊 Agregações e janelas (window functions)
+- 🔗 Joins e left joins
+- 🎯 Ordenação e ranking
+- ⚡ Performance benchmarks
+- 💡 Quando usar cada uma
+
+**Comparação de Abordagens:**
+
+| Operação | PySpark | SQL via Spark | Melhor Para |
+|----------|---------|---|---|
+| **SELECT simples** | `df.select(cols)` | `SELECT col FROM table` | SQL - mais legível |
+| **FILTER** | `df.filter(condition)` | `WHERE condition` | SQL - intuitivo |
+| **GROUPBY** | `df.groupBy().agg()` | `GROUP BY ... HAVING` | SQL - performance |
+| **JOIN** | `df.join(df2, on)` | `JOIN ... ON` | SQL - otimização |
+| **Window Functions** | `df.over(Window.partitionBy())` | `OVER (PARTITION BY)` | SQL - nativo |
+| **Lógica Customizada** | Python UDF | SQL UDF | PySpark - flexibilidade |
+
+**Código de Exemplo:**
+
+```python
+# PySpark
+df_pyspark = spark.read.csv("dados.csv", header=True)
+resultado = (df_pyspark
+    .filter(df_pyspark.idade > 30)
+    .groupBy("departamento")
+    .agg(F.avg("salario").alias("media_salario"))
+    .orderBy(F.desc("media_salario")))
+
+# SQL
+spark.sql("""
+    SELECT 
+        departamento,
+        AVG(salario) as media_salario
+    FROM dados
+    WHERE idade > 30
+    GROUP BY departamento
+    ORDER BY media_salario DESC
+""")
+```
+
+**Performance:**
+- SQL geralmente é mais otimizado pelo Catalyst
+- PySpark oferece mais controle e flexibilidade
+- Ambos compilam para Spark Plan idêntico em muitos casos
+
+---
+
+## 🚀 Como Usar Este Repositório
+
+### 1️⃣ Pré-requisitos
+
+- Conta Databricks (Community Edition ou Pro)
+- Python 3.8+
+- Conhecimento básico de SQL e Spark
+
+### 2️⃣ Importar Notebooks
+
+**Opção 1: Via Interface Databricks**
+1. Acesse seu workspace Databricks
+2. Clique em "Import" → "URL"
+3. Cole a URL do notebook do GitHub
+4. Clique em "Import"
+
+**Opção 2: Download Local**
+1. Baixe o arquivo `.ipynb`
+2. Faça upload no Databricks
+3. Defina um cluster para executar
+
+### 3️⃣ Configurar Ambiente
+
+```python
+# No primeiro cell do notebook, execute:
+from pyspark.sql import functions as F
+from pyspark.sql.window import Window
+import pandas as pd
+
+# Confirme que Spark está disponível
+print(spark.version)
+```
+
+### 4️⃣ Executar Notebooks
+
+- Selecione um cluster Databricks ativo
+- Execute célula por célula (Shift + Enter)
+- Modifique parâmetros e dados conforme necessário
+
+## 🔧 Componentes Principais
+
+### Dependências e Bibliotecas
+
+| Biblioteca | Versão | Uso |
+|-----------|--------|-----|
+| PySpark | 3.0+ | Processamento distribuído |
+| SQL (Databricks) | Native | Queries analíticas |
+| Pandas | 1.0+ | Manipulação local de dados |
+| Numpy | 1.19+ | Operações numéricas |
+| Matplotlib/Plotly | Latest | Visualizações |
+
+### Técnicas de Análise
+
+- **EDA (Exploratory Data Analysis)**: Perfil de dados, distribuições, correlações
+- **Data Profiling**: Qualidade, completude, validade
+- **Anomaly Detection**: Detecção de outliers e padrões
+- **Windowing**: Análises temporais e rankingização
+- **Delta Lake**: Versionamento e ACID em Data Lakes
+
+## 📊 Exemplos de Análises
+
+### Exemplo 1: Agregação Temporal
+
+```python
+# Analisar tendências por período
+resultado = spark.sql("""
+    SELECT 
+        DATE_TRUNC('month', data_transacao) as mes,
+        categoria,
+        COUNT(*) as total_transacoes,
+        SUM(valor) as total_vendas,
+        AVG(valor) as ticket_medio
+    FROM transacoes
+    WHERE ano = 2024
+    GROUP BY DATE_TRUNC('month', data_transacao), categoria
+    ORDER BY mes DESC, total_vendas DESC
+""")
+```
+
+### Exemplo 2: Análise com Window Functions
+
+```python
+# Ranking de clientes por recência
+resultado = spark.sql("""
+    SELECT 
+        cliente_id,
+        MAX(data_transacao) as ultima_compra,
+        DAYS(CURRENT_DATE(), MAX(data_transacao)) as dias_desde_compra,
+        RANK() OVER (ORDER BY MAX(data_transacao) DESC) as ranking_recencia
+    FROM transacoes
+    GROUP BY cliente_id
+""")
+```
+
+### Exemplo 3: Detecção de Anomalias
+
+```python
+# Identificar transações atípicas por cliente
+resultado = spark.sql("""
+    WITH stats_cliente AS (
+        SELECT 
+            cliente_id,
+            AVG(valor) as valor_medio,
+            STDDEV_POP(valor) as desvio_padrao
+        FROM transacoes
+        GROUP BY cliente_id
+    )
+    SELECT 
+        t.cliente_id,
+        t.valor,
+        s.valor_medio,
+        ABS(t.valor - s.valor_medio) / NULLIF(s.desvio_padrao, 0) as z_score
+    FROM transacoes t
+    JOIN stats_cliente s ON t.cliente_id = s.cliente_id
+    WHERE ABS(t.valor - s.valor_medio) / s.desvio_padrao > 3
+""")
+```
+
+## 💡 Dicas e Boas Práticas
+
+### Performance Otimization
+
+- ✅ Use particionamento apropriado
+- ✅ Prefira SQL nativo ao PySpark para queries complexas
+- ✅ Utilize Delta Lake para melhor performance
+- ✅ Broadcast pequenos DataFrames em joins
+- ❌ Evite UDFs Python quando possível (lento)
+- ❌ Não use collect() em DataFrames grandes
+
+### Estrutura de Dados
+
+```
+Projeto analítico bem estruturado:
+├── Bronze (Raw Data)
+│   └── Dados brutos, sem transformação
+├── Silver (Cleaned Data)
+│   └── Dados limpos, validados, enriquecidos
+└── Gold (Business Ready)
+    └── Dados modelados para consumo
+```
+
+### Monitoramento e Logging
+
+```python
+# Logging básico em Databricks
+print(f"[INFO] Processados {df.count()} registros")
+print(f"[INFO] Schema: {df.printSchema()}")
+print(f"[WARN] Possível duplicação detectada")
+```
+
+## 📈 Extensões Futuras
+
+- [ ] Notebooks adicionais com casos de uso específicos
+- [ ] Modelos de ML integrados (MLlib, scikit-learn)
+- [ ] Pipelines de ETL com Databricks Workflows
+- [ ] Integração com BI Tools (Tableau, Power BI)
+- [ ] Exemplos com Apache Iceberg
+- [ ] Testes unitários para lógica de transformação
+- [ ] Benchmarks de performance em datasets maiores
+- [ ] Integração com Databricks SQL (queries otimizadas)
+
+## 🛡️ Segurança e Governança
+
+- ✅ Dados sensíveis podem ser mascarados
+- ✅ Controle de acesso por role
+- ✅ Auditoria de operações no Workspace
+- ✅ Lineage de dados com Delta Lake
+
+## 🤝 Contribuindo
+
+Contribuições são bem-vindas! Você pode:
+1. Adicionar novos notebooks com casos de uso
+2. Melhorar exemplos existentes
+3. Adicionar testes e validações
+4. Expandir documentação
+5. Reportar bugs ou sugestões
+
+## 📞 Suporte
+
+Para dúvidas ou problemas:
+- Abra uma issue no GitHub
+- Consulte a documentação Databricks: https://docs.databricks.com
+- Spark Documentation: https://spark.apache.org/docs/latest/
+- Community: https://community.databricks.com
+
+## 🎓 Recursos de Aprendizado
+
+- [Databricks Academy](https://www.databricks.com/learn)
+- [Spark SQL Documentation](https://spark.apache.org/docs/latest/sql-getting-started.html)
+- [PySpark API](https://spark.apache.org/docs/latest/api/python/)
+- [Delta Lake Guide](https://docs.delta.io/)
+- [Databricks Best Practices](https://docs.databricks.com/best-practices/)
+
+## 📝 Licença
+
+Este projeto é fornecido como material educacional e de referência.
+
+---
+
+**Desenvolvido com ❤️ para a comunidade de Data Analytics e Databricks**
